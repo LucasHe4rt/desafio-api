@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/categories', 'CategoriesController@index');
+$router->get('/categories/{categoryId}', 'CategoriesController@show');
+$router->get('/categories/{categoryId}/products', 'CategoriesController@showProducts');
+$router->get('/products', 'ProductsController@index');
+$router->get('/products/{productId}', 'ProductsController@show');

@@ -19,4 +19,8 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function getImageAttribute($value){
+        return env('APP_URL') . "/assets/" . $value;
+    }
+
 }
